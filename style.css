@@ -1,0 +1,78 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+:root {
+  --cursor: 0px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+#app {
+  background-color: #303030;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.up {
+  width: 100%;
+  height: 420px;
+  /* border: 1px solid #fff; */
+  position: relative;
+}
+
+.up .base-line {
+  width: 2px;
+  height: 80%;
+  background: linear-gradient(
+    0deg,
+    #303030 0%,
+    #1a1a1a 20%,
+    #1a1a1a 80%,
+    #303030 100%
+  );
+  position: absolute;
+  left: 50%;
+  top: 10%;
+}
+
+.up .cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: calc(50% - 15px);
+  top: 30px;
+  background: url('./assets/img/locator.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateX(var(--cursor));
+}
+
+.tip {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 20px;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+}
+
+.tip .text {
+  font-size: 20px;
+}
+
+.guitar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.guitar canvas {
+  max-width: 560px;
+  width: 100%;
+}
